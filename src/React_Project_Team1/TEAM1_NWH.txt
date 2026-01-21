@@ -14,3 +14,6 @@
 - 일 월 년 기능 구현 하면 좋을 듯.
 - 상단에는 KDI 카드 화면도 좋을 듯
 
+// 초기 설정
+그래프 구현에 필요한 패키지. (아래에 있는 코드 해당 프로젝트 폴더에 실행.)
+npm install react-chartjs-2 chart.js web-vitals 
