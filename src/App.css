@@ -1,0 +1,111 @@
+.App {
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  font-size: 2.5rem;        
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 3rem;
+  color: #1e293b;           
+}
+
+/*---------------------------------------------------------------------------------*/
+
+.kpi-bar {
+  flex: 1;
+  display: flex;
+  gap: 2rem;               
+  margin: 5rem 0 2rem 0;
+  padding: 3rem 4rem;       
+  background: rgba(255,255,255,0.9);
+  border-radius: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  align-items: center;      
+  transition: all 0.25s ease;
+}
+
+.kpi-bar:hover {
+  transform: translateY(-8px);    
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.kpi-item {                 
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #1e293b;
+}
+
+.mini-chart {
+  position: flex;
+  height: 20vh !important;
+  width: 70vw !important;
+  margin-top: '1rem';
+  overflow: hidden;     /* 그래프가 밖으로 나가지 않음 */
+  border-radius: 1.5rem;
+}
+
+/*---------------------------------------------------------------------------------*/
+
+.dashboard-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.box {
+  flex: 1;
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.box:hover {
+  transform: translateY(-8px);    
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);  
+}
+
+.chart-container:hover .chart-style { /* 내부 차트도 강조시 사용 */
+
+}
+
+.chart-container {
+  border-radius: 2rem;
+  background-color: rgb(255, 255, 255);
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.chart-style {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  background: #FFFFFF;      
+  border-radius: 1.5rem;
+}
+
+/* 해석 {
+  flex 1 -> 남은 공간 균등하게 채움.
+  border-radius -> 모서리 둥글게 만들기. rem = 16px
+  box-shadow -> 그림자 효과. 
+  overflow -> 보여지는 값보다 값이 더 많을 경우 숨김 처리.
+*/
+
+/*---------------------------------------------------------------------------------*/
+
+@media (max-width: 1024px) {
+  .dashboard-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+   .kpi-bar {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
